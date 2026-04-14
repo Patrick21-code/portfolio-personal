@@ -1,21 +1,14 @@
 
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
-import { HTML5, CSS, JavaScript, TailwindCSS, React, Nextjs, MySQL, Git} from '@/components/icons'
+import { HTML5, CSS, JavaScript, TailwindCSS, React, Nextjs, MySQL, Git, GitHub} from '@/components/icons'
 
 export default function About () {
 
     return (
         <div className="flex justify-between">
             <div> {/*about*/}
+                <p>About Me</p>
                 <p>
                     Hi, I’m Patrick. I focus on frontend development and enjoy working with React to build interfaces that feel clear
                     and easy to use. I’m still learning and growing as a developer, but I take pride in creating simple, practical
@@ -33,6 +26,7 @@ export default function About () {
                         <Nextjs className="size-10" />
                         <MySQL className="size-10" />
                         <Git className="size-10" />
+                        <GitHub className="size-10" />
                     </CardContent>
                 </Card>
             </div>
