@@ -1,7 +1,6 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { GitHub } from "@/components/icons/index"
 
 export default function Home () {
 
@@ -14,7 +13,7 @@ export default function Home () {
                     <p>I like creating interfaces that feel simple and enjoyable, turning ideas into smooth, appealing experiences</p>
                 </div>
                 <div className="flex align-items gap-2"> {/* clickables */}
-                    <GitHub className="size-10" />
+                    <Button className="border-2 rounded-xl px-4">See Projects</Button>
                     <Button className="border-2 rounded-xl px-4">Download Resume</Button>
                 </div>
             </div>
