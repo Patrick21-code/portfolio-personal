@@ -24,7 +24,7 @@ export default function Contact () {
             <div className="flex gap-2">
                 <Button className="border-2 rounded-xl px-4" onClick={handleEmailClick}><Gmail /> Gmail</Button>
                 <a href="https://github.com/Patrick21-code" target="_blank" >
-                    <Button className="border-2 rounded-xl px-4"><GitHub /> GitHub</Button>
+                    <Button className="border-2 rounded-xl px-4" variant="outline"><GitHub /> GitHub</Button>
                 </a>
                 <a href="https://www.linkedin.com/in/patrick-danielle-tomas-441395353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" >
                     <Button className="border-2 rounded-xl px-4"><LinkedIn /> LinkedIn</Button>
