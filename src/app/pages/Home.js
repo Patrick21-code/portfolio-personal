@@ -17,7 +17,7 @@ export default function Home () {
     }
 
     const handleDownloadResume = () => {
-        // Add your resume download logic here
+        window.open('/Patrick_Tomas_Resume.pdf', '_blank')
         console.log('Download resume')
     }
 
