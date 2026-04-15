@@ -1,14 +1,83 @@
+"use client"
+
+import { useState, useEffect } from 'react'
 
 export default function Navbar () {
+    const [activeSection, setActiveSection] = useState('home')
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20)
+            
+            // Determine active section based on scroll position
+            const sections = ['home', 'about', 'projects', 'contact']
+            const scrollPosition = window.scrollY + 100
+
+            for (const section of sections) {
+                const element = document.getElementById(section)
+                if (element) {
+                    const { offsetTop, offsetHeight } = element
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(section)
+                        break
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+            const offset = 80
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - offset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            })
+        }
+    }
+
+    const navLinks = [
+        { id: 'home', label: 'Home' },
+        { id: 'about', label: 'About' },
+        { id: 'projects', label: 'Projects' },
+        { id: 'contact', label: 'Contact' }
+    ]
 
     return (
-        <div className="flex justify-between">
-            <h1>Patrick.dev</h1>
-            <nav>
-                <a>Home</a>
-                <a>About</a>
-                <a>Projects</a>
-                <a>Contact</a>
+        <div className={`flex justify-between items-center px-6 py-4 md:px-12 lg:px-24 border-b sticky top-0 z-50 transition-all duration-300 ${
+            isScrolled 
+                ? 'bg-background/80 backdrop-blur-xl border-border/60 shadow-lg' 
+                : 'bg-background/60 backdrop-blur-md border-border/30'
+        }`}>
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight text-foreground hover:gradient-text transition-all duration-300 cursor-pointer animate-fade-in-down"
+                onClick={() => scrollToSection('home')}>
+                Patrick<span className="text-primary">.dev</span>
+            </h1>
+            <nav className="flex gap-6 md:gap-8">
+                {navLinks.map((link, index) => (
+                    <button
+                        key={link.id}
+                        onClick={() => scrollToSection(link.id)}
+                        className={`text-sm md:text-base font-medium transition-all duration-300 cursor-pointer relative group animate-fade-in-down delay-${(index + 1) * 100}
+                            ${activeSection === link.id 
+                                ? 'text-primary' 
+                                : 'text-muted-foreground hover:text-foreground'
+                            }`}
+                    >
+                        {link.label}
+                        <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-300 ${
+                            activeSection === link.id ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}></span>
+                    </button>
+                ))}
             </nav>
         </div>
     )
