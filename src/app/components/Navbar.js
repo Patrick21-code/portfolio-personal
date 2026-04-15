@@ -18,19 +18,24 @@ export default function Navbar () {
             
             // Determine active section based on scroll position
             const sections = ['home', 'about', 'projects', 'contact']
-            const scrollPosition = window.scrollY + 100
+            const scrollPosition = window.scrollY + window.innerHeight / 2
 
-            for (const section of sections) {
+            // Check sections in reverse order to prioritize lower sections
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i]
                 const element = document.getElementById(section)
                 if (element) {
-                    const { offsetTop, offsetHeight } = element
-                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                    const { offsetTop } = element
+                    if (scrollPosition >= offsetTop) {
                         setActiveSection(section)
                         break
                     }
                 }
             }
         }
+
+        // Initial check
+        handleScroll()
 
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
