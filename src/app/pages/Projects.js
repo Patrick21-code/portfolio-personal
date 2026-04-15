@@ -8,13 +8,19 @@ const projects = [
         title: "Truth Table Generator",
         description: "A Python project I built to generate truth tables for logical expressions. It's a simple tool that helps visualize how inputs lead to outputs, making logic easier to grasp.",
         techs: "Python",
-        link: ""
+        link: "https://github.com/Patrick21-code/truth-table-generator"
     },
     {
         title: "Pawfection Palace",
-        description: "Pawfection Palace is a website where pet owners can schedule appointments with ease. From the admin side, it provides a simple way to view and manage those bookings.",
+        description: "A website where pet owners can schedule appointments with ease. From the admin side, it provides a simple way to view and manage those bookings.",
         techs: ["HTML", "CSS", "JavaScript"],
         link: "https://github.com/Patrick21-code/Pawfection-Palace"
+    },
+    {
+        title: "Ilocos Norte Accessibility Finder",
+        description: "A web project that helps users discover accessible facilities and services across the province. With a simple interface, it guides people to public spaces that match their needs, making accessibility easier to identify and improve.",
+        techs: ["HTML", "CSS", "Python", "Perl"],
+        link: "https://github.com/Patrick21-code/ilocos-norte-accessibility-finder"
     }
 ]
 
