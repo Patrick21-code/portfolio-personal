@@ -55,7 +55,7 @@ export default function Home () {
             <div className="relative opacity-0 animate-slide-in-right delay-200">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-2xl opacity-30 animate-pulse"></div>
                 <Avatar className="size-64 md:size-72 lg:size-80 ring-4 ring-primary/20 shadow-2xl hover:ring-primary/40 transition-all duration-500 hover:scale-105 relative z-10 animate-float"> {/*right side*/}
-                    <AvatarImage src="/profile-picture.jpg" className="object-cover" />
+                    <AvatarImage src="/profile.jpg" className="object-cover" />
                     <AvatarFallback>Profile Picture</AvatarFallback>
                 </Avatar>
             </div>
