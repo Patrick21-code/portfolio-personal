@@ -1,12 +1,53 @@
+import { HTML5, CSS, JavaScript, TailwindCSS, React, Nextjs, MySQL, Python, Git, GitHub} from '@/components/icons'
+import SkillsCard from '../components/SkillsCard'
 
-import { Card, CardContent } from "@/components/ui/card"
+const skills = [
+    {
+        icon: <HTML5 />,
+        name: "HTML"
+    },
+    {
+        icon: <CSS />,
+        name: "CSS"
+    },
+    {
+        icon: <JavaScript />,
+        name: "JavaScript"
+    },
+    {
+        icon: <TailwindCSS />,
+        name: "TailwindCSS"
+    },
+    {
+        icon: <React />,
+        name: "React"
+    },
+    {
+        icon: <Nextjs />,
+        name: "Nextjs"
+    },
+    {
+        icon: <MySQL />,
+        name: "MySQL"
+    },
+    {
+        icon: <Python />,
+        name: "Python"
+    },
+    {
+        icon: <Git />,
+        name: "Git"
+    },
+    {
+        icon: <GitHub />,
+        name: "GitHub"
+    }
 
-import { HTML5, CSS, JavaScript, TailwindCSS, React, Nextjs, MySQL, Git, GitHub} from '@/components/icons'
-
+]
 export default function About () {
 
     return (
-        <div className="flex justify-between">
+        <div className="flex flex-col justify-between">
             <div> {/*about*/}
                 <p>About Me</p>
                 <p>
@@ -16,19 +57,13 @@ export default function About () {
                 </p>
             </div>
             <div> {/*tech skills*/}
-                <Card>
-                    <CardContent>
-                        <HTML5 className="size-10" />
-                        <CSS className="size-10" />
-                        <JavaScript className="size-10" />
-                        <TailwindCSS className="size-10" />
-                        <React className="size-10" />
-                        <Nextjs className="size-10" />
-                        <MySQL className="size-10" />
-                        <Git className="size-10" />
-                        <GitHub className="size-10" />
-                    </CardContent>
-                </Card>
+                {skills.map((skill, index) => (
+                    <SkillsCard
+                        key={index}
+                        icon={skill.icon}
+                        name={skill.name}
+                    />
+                ))}
             </div>
         </div>
     )
