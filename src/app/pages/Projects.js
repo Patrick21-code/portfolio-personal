@@ -52,7 +52,7 @@ export default function Projects () {
                 Projects
                 <span className="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"></span>
             </h2>
-            <div className="flex flex-col gap-6 max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
                 {projects.map((project, index) => (
                     <div 
                         key={index}

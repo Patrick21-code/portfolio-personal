@@ -62,12 +62,12 @@ export default function Contact () {
                 <Button 
                     onMouseEnter={() => setHoveredButton('gmail')}
                     onMouseLeave={() => setHoveredButton(null)}
-                    className="border-2 rounded-xl px-6 py-6 font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-2 flex items-center gap-2 bg-primary text-primary-foreground border-primary hover:bg-primary/90 relative overflow-hidden group" 
+                    variant="outline"
+                    className="border-2 rounded-xl px-6 py-6 font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-2 flex items-center gap-2 border-primary/30 hover:border-primary hover:bg-primary/10 relative group" 
                     onClick={handleEmailClick}
                 >
-                    <span className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></span>
-                    <Gmail className="size-5 relative z-10 group-hover:rotate-12 transition-transform duration-300" /> 
-                    <span className="relative z-10">Gmail</span>
+                    <Gmail className="size-5 group-hover:rotate-12 transition-transform duration-300" /> 
+                    <span>Gmail</span>
                     {hoveredButton === 'gmail' && (
                         <span className="absolute -top-1 -right-1 flex h-3 w-3">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -96,11 +96,11 @@ export default function Contact () {
                     <Button 
                         onMouseEnter={() => setHoveredButton('linkedin')}
                         onMouseLeave={() => setHoveredButton(null)}
-                        className="border-2 rounded-xl px-6 py-6 font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-2 flex items-center gap-2 bg-secondary text-secondary-foreground border-secondary hover:bg-secondary/90 relative overflow-hidden group"
+                        variant="outline"
+                        className="border-2 rounded-xl px-6 py-6 font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 hover:-translate-y-2 flex items-center gap-2 border-primary/30 hover:border-primary hover:bg-primary/10 relative group"
                     >
-                        <span className="absolute inset-0 bg-gradient-to-r from-secondary via-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                        <LinkedIn className="size-5 relative z-10 group-hover:rotate-12 transition-transform duration-300" /> 
-                        <span className="relative z-10">LinkedIn</span>
+                        <LinkedIn className="size-5 group-hover:rotate-12 transition-transform duration-300" /> 
+                        <span>LinkedIn</span>
                         {hoveredButton === 'linkedin' && (
                             <span className="absolute -top-1 -right-1 flex h-3 w-3">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>

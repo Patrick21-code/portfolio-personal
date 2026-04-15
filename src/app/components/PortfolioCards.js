@@ -19,12 +19,12 @@ export default function PortfolioCards ({ title, description, techs, link }) {
         <Card 
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="border border-border/50 shadow-md hover:shadow-2xl transition-all duration-500 hover:border-primary/50 hover:-translate-y-2 relative overflow-hidden group bg-card/50 backdrop-blur-sm"
+            className="border border-border/50 shadow-md hover:shadow-2xl transition-all duration-500 hover:border-primary/50 hover:-translate-y-2 relative overflow-hidden group bg-card/50 backdrop-blur-sm h-full flex flex-col"
         >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-secondary to-accent transition-all duration-500 ${isHovered ? 'w-2' : 'w-1'}`}></div>
             
-            <CardContent className="flex flex-col gap-4 p-6 relative z-10">
+            <CardContent className="flex flex-col gap-4 p-6 relative z-10 flex-1">
                 <div className="flex items-start justify-between gap-4">
                     <CardTitle className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-primary transition-colors duration-300">
                         { title }
