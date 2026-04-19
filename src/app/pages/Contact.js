@@ -68,12 +68,6 @@ export default function Contact () {
                 >
                     <Gmail className="size-5 group-hover:rotate-12 transition-transform duration-300" /> 
                     <span>Gmail</span>
-                    {hoveredButton === 'gmail' && (
-                        <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
-                        </span>
-                    )}
                 </Button>
                 <a href="https://github.com/Patrick21-code" target="_blank" rel="noopener noreferrer">
                     <Button 
@@ -84,12 +78,6 @@ export default function Contact () {
                     >
                         <GitHub className="size-5 group-hover:rotate-12 transition-transform duration-300" /> 
                         <span>GitHub</span>
-                        {hoveredButton === 'github' && (
-                            <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                            </span>
-                        )}
                     </Button>
                 </a>
                 <a href="https://www.linkedin.com/in/patrick-danielle-tomas-441395353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
@@ -101,12 +89,6 @@ export default function Contact () {
                     >
                         <LinkedIn className="size-5 group-hover:rotate-12 transition-transform duration-300" /> 
                         <span>LinkedIn</span>
-                        {hoveredButton === 'linkedin' && (
-                            <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
-                            </span>
-                        )}
                     </Button>
                 </a>
             </div>
