@@ -18,9 +18,6 @@ export default function SkillsCard ({ icon, name }) {
                     {icon}
                 </div>
                 <p className="text-sm md:text-base font-medium text-foreground text-center">{name}</p>
-                {isHovered && (
-                    <div className="absolute top-0 right-0 w-2 h-2 bg-accent rounded-full animate-ping"></div>
-                )}
             </CardContent>
         </Card>
     )
